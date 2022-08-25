@@ -1,0 +1,13 @@
+button{
+    color:white;
+    background-color: green;
+    border-width: 0;
+    width: 100px;
+    &:hover{
+        background-color: black;
+        color: white;
+    }   
+    &:disabled{
+        background-color: grey;
+    }
+}

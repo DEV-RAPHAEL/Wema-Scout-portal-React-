@@ -1,0 +1,13 @@
+button {
+  color: white;
+  background-color: green;
+  border-width: 0;
+  border-radius: 0;
+}
+button:hover {
+  background-color: black;
+  color: white;
+}
+button:disabled {
+  background-color: grey;
+}/*# sourceMappingURL=button.css.map */
