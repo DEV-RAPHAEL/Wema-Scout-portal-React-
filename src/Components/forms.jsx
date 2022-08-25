@@ -3,7 +3,6 @@ import './style/form.css'
 import './style/button/button.css'
 import logo from '../assets/logo.png'
 import { PersonalInfo,Step2, Images, FinalInfo } from '../Components'
-import Passport from './passport'
 const Form = () => {
     const [Page, setPage ] = useState(0)
 
