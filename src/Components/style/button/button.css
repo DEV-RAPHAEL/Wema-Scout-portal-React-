@@ -1,13 +1,13 @@
 button {
-  color: white;
-  background-color: green;
+  color: white !important;
+  background-color: green !important;
   border-width: 0;
-  border-radius: 0;
+  width: 100px;
 }
 button:hover {
   background-color: black;
   color: white;
 }
 button:disabled {
-  background-color: grey;
+  background-color: grey !important;
 }/*# sourceMappingURL=button.css.map */

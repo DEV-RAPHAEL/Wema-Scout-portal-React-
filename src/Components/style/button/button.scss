@@ -1,6 +1,6 @@
 button{
-    color:white;
-    background-color: green;
+    color:white !important;
+    background-color: green !important;
     border-width: 0;
     width: 100px;
     &:hover{
@@ -8,6 +8,6 @@ button{
         color: white;
     }   
     &:disabled{
-        background-color: grey;
+        background-color: grey !important;
     }
 }

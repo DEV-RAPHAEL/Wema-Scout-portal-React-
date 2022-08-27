@@ -1,10 +1,14 @@
 import { useState } from 'react'
 import './style/form.css'
 import './style/button/button.css'
+import './style/button/button.css.map'
 import logo from '../assets/logo.png'
 import { PersonalInfo,Step2, Images, FinalInfo } from '../Components'
 const Form = () => {
     const [Page, setPage ] = useState(0)
+    const [FormData, setFormData] = useState({
+        email:""
+    })
 
     const Pages = () =>{
         if (Page == 0){
@@ -49,7 +53,7 @@ const Form = () => {
            <Pages/>
         </div>
         <div className='footer'>
-            <button class disabled={Page < 1} onClick={() => {setPage((Current) => Current -1);}}>Back</button>
+            <button className='button' class disabled={Page < 1} onClick={() => {setPage((Current) => Current -1);}}>Back</button>
             <button disabled={Page== formTitles.length -1} onClick={() => {setPage((Current) => Current +1);}}>Next</button>
         </div>
         </div>
