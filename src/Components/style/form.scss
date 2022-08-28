@@ -11,9 +11,10 @@
     .personalInfo, .step2, .step3, .final{
         display: flex;
         flex-direction: column;
+        
     
     }
-    input{
+    input, select{
         padding:12px;
         margin: 10px;
         border-radius: 2px;

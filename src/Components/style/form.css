@@ -11,20 +11,20 @@
   display: flex;
   flex-direction: column;
 }
-.form input {
+.form input, .form select {
   padding: 12px;
   margin: 10px;
   border-radius: 2px;
   border: 0;
   border-bottom: 1px solid green;
 }
-.form input::-moz-placeholder {
+.form input::-moz-placeholder, .form select::-moz-placeholder {
   color: green;
 }
-.form input:-ms-input-placeholder {
+.form input:-ms-input-placeholder, .form select:-ms-input-placeholder {
   color: green;
 }
-.form input::placeholder {
+.form input::placeholder, .form select::placeholder {
   color: green;
 }
 .form .progressbar {

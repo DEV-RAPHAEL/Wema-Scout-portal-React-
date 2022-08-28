@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 
-const Images = () => {
+const Images = ({FormData, setFormData}) => {
   const [Photo, setPhoto] = useState();
   const [File, setFile] = useState();
   function handleChange(e) {

@@ -1,28 +1,40 @@
 import { useState } from 'react'
 import './style/form.css'
 import './style/button/button.css'
-import './style/button/button.css.map'
 import logo from '../assets/logo.png'
 import { PersonalInfo,Step2, Images, FinalInfo } from '../Components'
 const Form = () => {
     const [Page, setPage ] = useState(0)
     const [FormData, setFormData] = useState({
-        email:""
+        firstName:"",
+        lastName:"",
+        middleName:"",
+        gender:"",
+        address:"",
+        phone:"",
+        agent:'',
+        dob:0,
+        passport:"",
+        signature:"",
+        USSD:'True',
+        email:"",
+        subAgent:"",
+        BVN:''
     })
 
     const Pages = () =>{
         if (Page == 0){
-            return <PersonalInfo/>;
+            return <PersonalInfo FormData={FormData} setFormData={setFormData}/>;
         }
         else if (Page === 1){
-            return <Step2/>;
+            return <Step2 FormData={FormData} setFormData={setFormData}/>;
         }
         else if (Page === 2 ){
             return <Images/>
         }
 
         else{
-            return <FinalInfo/>
+            return <FinalInfo FormData={FormData} setFormData={setFormData}/>
         }
     }
     const formTitles = 
@@ -54,7 +66,14 @@ const Form = () => {
         </div>
         <div className='footer'>
             <button className='button' class disabled={Page < 1} onClick={() => {setPage((Current) => Current -1);}}>Back</button>
-            <button disabled={Page== formTitles.length -1} onClick={() => {setPage((Current) => Current +1);}}>Next</button>
+            <button  onClick={() => {
+                if(Page== formTitles.length -1){
+                    alert('Form Submitted')
+                    console.log(FormData)
+                }else{
+                    setPage((Current) => Current +1);
+                }
+               }}>{Page === formTitles.length - 1 ? 'Submit':'Next'}</button>
         </div>
         </div>
     </div>
